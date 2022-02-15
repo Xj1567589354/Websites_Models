@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei UI';
+}
+.main{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.main h1{
+    position: relative;
+    height: auto;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 5% 0 1% 0;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 650;
+    letter-spacing: 1.5px;
+    color: #e765c0;
+    border-left: 5px solid  #e765c0;
+    border-right: 5px solid  #e765c0;
+    background: rgba(0,0,0,0.05);
+}
+.main p{
+    position: relative;
+    height: auto;
+    width:100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    color: #777;
+}
+.main .gallery{
+    position: relative;
+    height: auto;
+    width:90%;
+    margin: auto;
+    padding: 45px 0;
+    /*网格系统*/
+    display: grid;
+    /*定义四列网格*/
+    grid-template-columns: auto auto auto auto;
+    /*行列之间的间距*/
+    gap: 2vh;
+    /*确保自动填满一行*/
+    grid-auto-flow:dense;
+}
+.main .gallery .img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.9);
+    border-radius: 5px;
+}
+.main .gallery .img:first-child{
+    /*列的起始位置跨越两列*/
+    grid-column-start: span 2;
+    /*行的起始位置跨越两行*/
+    grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(2n+3){
+    grid-column-start: span 2;
+}
+.main .gallery .img:nth-child(4n+5){
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(6n+7){
+    grid-row-start: span 1;
+}
+.main .gallery .img:nth-child(8n+9){
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+}
+.main .gallery .img img{
+    height: 100%;
+    width: 100%;
+    /*对图片进行裁剪，保留原有尺寸*/
+    object-fit: cover;
+    /*filter滤镜效果*/
+    /*改变亮度和变成灰色*/
+    filter: brightness(0.5) grayscale(100);
+    /*ease-in-out以慢速开始和介绍*/
+    transition: 0.3s ease-in-out;
+}
+.main .gallery .img:hover img{
+    filter: brightness(1) grayscale(0);
+}
+@media only screen and (max-width:768px){
+    .main h1{
+        font-size: 1.8em;
+        width: 360px;
+    }
+    .main p{
+        font-size: 0.85em;
+    }
+    .main .gallery{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+@media only screen and (max-width:500px){
+    .main h1{
+        font-size: 1.2em;
+        width: 250px;
+    }
+    .main p{
+        font-size: 0.45em;
+    }
+    .main .gallery{
+        display: block;
+    }
+    .main .gallery .img{
+        display:block;
+        width: 100%;
+        height: 100%;
+        margin: 2% 0;
+    }
+    .main .gallery .img img{
+        display:block;
+        filter: brightness(1) grayscale(0);
+    } 
+}

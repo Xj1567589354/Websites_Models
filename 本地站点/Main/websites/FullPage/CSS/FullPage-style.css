@@ -1,0 +1,130 @@
+*{
+   font-family: "Microsoft Yahei"; 
+   margin: 0;
+   padding: 0;
+}
+/* .section {
+    text-align: center;
+     font: 50px "Microsoft Yahei"; 
+     color:white;
+     height: 754px;background:url(AncStyle/qiantang.jpg);position: relative
+   } */
+.bg{
+   width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ .spring{
+      background-image:url(../AncStyle/qiantang.jpg);
+}
+.summer{
+      background-image: linear-gradient(rgba(19, 29, 36, 0.521),rgba(24, 33, 39, 0.699)),url(../AncStyle/summer.jpg);
+}
+.auttum{
+   background-image:url(../AncStyle/auttum.jpg);
+}
+.winter{
+   background-image: linear-gradient(rgba(0, 92, 87, 0.185),rgba(0, 69, 90, 0.096)),url(../AncStyle/winter.jpg);
+}
+.menu{
+   position: fixed;
+   right: 3vw;
+   top: 0;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.menu li{
+   list-style: none;
+}
+.menu #btn-spring a {
+   background-image: url(../AncStyle/qiantang.jpg);
+   border-color: rgb(219, 215, 196);
+}
+.menu #btn-summer a {
+   background-image: url(../AncStyle/summer.jpg);
+   border-color: rgb(109, 92, 120);
+}
+.menu #btn-auttum a {
+   background-image: url(../AncStyle/auttum.jpg);
+   border-color: rgb(226, 222, 197);
+}
+.menu #btn-winter a {
+   background-image: url(../AncStyle/winter.jpg);
+   border-color: rgb(200, 200, 255);
+}
+.menu li a:hover, .menu .active a {
+   transform: scale(1.2,1.2);
+}
+.menu li a{
+   width: 6vw;
+   height: 4vw;
+   text-decoration: none;
+   display: block;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin: 1vw;
+   border-width: 0px;
+   border-style: solid;
+   transition: all 0.3s;
+}
+.poemplace{
+   width: 30%;
+   height: 62%;
+   position: fixed;
+   left: 10vw;
+   top: 17vh;
+    padding: 5vh 2vw;
+}
+.content{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.content span{
+   width: 100%;
+   height: 100%;
+   text-align: center;
+}
+.content h1{
+   position: relative;
+   font-size: 3em;
+   margin: 1em 0;
+   opacity: 0;
+   top: -5%;
+   transition: all 0.6s;
+}
+.content h3{
+   opacity: 0;
+   transition: all 0.6s;
+}
+.content p{
+   font-family: fangsong;
+   opacity: 0;
+    margin: 1em 0;
+    font-size: 1.8em;
+    font-weight: bolder;
+    transition: all 0.6s;
+
+}
+/* #menu li {
+   font-size: 14px;
+   }
+#menu a {
+   float: left; 
+   padding: 15px 25px; 
+   background-color: #fff; 
+   color: #333; 
+   text-decoration: none;
+   margin: 10px 0;
+   transition: all 0.3s ease;
+}
+  #menu li:hover a,#menu .active a{
+   transform: scale(1.5,1.5);
+ }; */

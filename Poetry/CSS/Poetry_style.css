@@ -1,0 +1,152 @@
+*{
+    font-family:"Microsoft YaHei" ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 30px;
+}
+.navbar{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 18px 0;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 10px 0;
+    background:rgb(125,125,125);
+}
+.navbar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color:#FFEBCD;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.banner{
+    height: 100vh;
+    background: url(../images/zhuge.jfif) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.navbar .menu-list{
+    display: inline-flex;
+    position: relative;
+}
+.menu-list li{
+    list-style: none;
+}
+.menu-list li a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: cyan;
+}
+.about{
+    padding: 40px 0;
+}
+.about .title{
+    font-size: 35px;
+    font-weight: 700;
+}
+.about .stitle{
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(125, 125, 125, 0.6);
+    margin-top: 5px;
+}
+.about p{
+    padding-top: 20px;
+    text-align: justify;
+}
+.icon{
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.icon.cancel-btn{
+    position: absolute;
+    right: 30px;
+    top:20px;
+    color: #fff;
+}
+/* .foot{
+    position: relative;
+} */
+.school,.major,.name{
+    margin: 5px 0;
+    text-align: right;
+    padding-right: 3vw;
+}
+/* #check{
+    display: none;
+} */
+.display{
+    position: fixed;
+    z-index: 55;
+    right: 30px;
+    top:17px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.display i{
+    animation: rotate 6s linear  infinite;
+}
+/* 关键帧，0%是动画开始时间，100%是动画结束时间 */
+@keyframes rotate{
+    0%{transform: rotateZ(0deg);}
+    100%{transform: rotateZ(360deg);}
+}
+
+
+@media  (max-width:868px){
+    body.disabledScroll{
+        overflow: hidden;
+    }
+    .navbar .menu-list{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height:100vh ;
+        width: 100%;
+        max-width: 400px;
+        background: #222;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        transition: all 0.3s ease;
+    } 
+    .navbar .menu-list.active{
+        left: 0%;
+    }
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+        font-size: 23px;
+    }
+    .icon{
+        display: block;
+    }
+    .menu-btn.hide{
+        display: none;
+    }
+    .display{
+        right: 70px;
+    }
+}

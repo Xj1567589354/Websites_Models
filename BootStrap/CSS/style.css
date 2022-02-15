@@ -1,0 +1,161 @@
+*{
+	margin:0;
+	padding: 0;
+	font-family:"Microsoft YaHei UI";
+}
+body{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(http://119.29.61.46/PHP/bg.php);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.main ul{
+	float: right;
+	list-style-type:none;
+	margin: 15px;
+}
+.l1,.l2,.l3,.l4,.l5{
+	display: inline-block;
+	border: 1px solid #FFFFFF;
+	padding: 5px 0px;;
+}
+.main ul li a{
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+	padding: 5px 20px;;
+}
+.main ul li a:hover{
+	background-color: #fff;
+	color:#000;
+}
+.loves img{
+	height: auto;
+	width: 100px;
+	border: 3px solid #7C6363;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 32%;
+	margin-left: -48px;
+	transition: all 0.2s ease;
+}
+.loves img:hover{
+	border: 5px solid #D88655;
+	box-shadow: 0 0 25px 3px #D88655;
+}
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+.title{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.title h1{
+	color: #fff;
+	font-size:30px;
+}
+.button{
+	position: absolute;
+	top:58%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.btn{
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.6s ease;
+}
+.btn:hover{
+	background-color: #fff;
+	color:#000;
+}
+.sub-menu-11,.sub-menu-12{
+	display: none;
+}
+.main ul li:hover .sub-menu-11{
+	display: block;
+	pointer-events: none;
+	position: absolute;
+	background: rgba(0,0,30,0.5);
+	margin-top: 5px;
+	margin-left: 2px;
+}
+.main ul li:hover .sub-menu-12{
+	display: block;
+	position: absolute;
+	background: rgba(0,0,30,0.5);
+	margin-top: 5px;
+	margin-left: 2px;
+}
+.main ul li:hover .sub-menu-11 ul{
+	display: block;
+	margin: 0px;
+}
+.main ul li:hover .sub-menu-12 ul{
+	display: block;
+	margin: 5px;
+}
+.main ul li:hover .sub-menu-11 ul li{
+	width: 95px;
+	padding: 10px;
+	background: transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #fff;
+}
+.main ul li:hover .sub-menu-12 ul .hover-me{
+	width: 160px;
+	padding: 10px;
+	background: transparent;
+	border-bottom: 1px solid #fff;
+	border-radius: 0;
+}
+.sub-menu-21,.sub-menu-22{
+	display: none;
+}
+.hover-me:hover .sub-menu-21{
+	width: 165px;
+	position: absolute;
+	display: block;
+	margin-top: -15px;
+	margin-left: 150px;
+	background: rgba(0,0,30,0.5);
+}
+.hover-me:hover .sub-menu-21 ul li
+{
+	width: 140px;
+	padding: 10px;
+	background: transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #fff;
+}
+.hover-me:hover .sub-menu-22{
+	width: 158px;
+	position: absolute;
+	display: block;
+	margin-top: -15px;
+	margin-left: 150px;
+	background: rgba(0,0,30,0.5);
+}
+.hover-me:hover .sub-menu-22 ul li
+{
+	width: 140px;
+	padding: 7px;
+	background: transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #fff;
+}
+.sub-menu-21 ul li a{
+	margin:0px;
+}
+.sub-menu-22 ul li a{
+	margin-left:5px;
+	margin-top: 5px;
+}

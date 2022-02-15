@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Seasons</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.0/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cvlocke.site/websites/poetry/scripts/fullpage.css">
+    <script src="https://cvlocke.site/websites/poetry/scripts/fullpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/vendors/easings.min.js"></script>
+    <!-- <script src="https://api.cvlocke.site/lib/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://api.cvlocke.site/lib/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://api.cvlocke.site/lib/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <link rel="stylesheet" href="https://api.cvlocke.site/lib/fullpage/2.7.8/fullpage.css">
+    <script src="https://api.cvlocke.site/lib/fullpage/2.7.8/fullpage.js"></script> -->
+    <link rel="stylesheet" href="CSS/FullPage-style.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li data-menuanchor="page1" id="btn-spring"><a href="#page1"></a></li>
+            <li data-menuanchor="page2" id="btn-summer"><a href="#page2"></a></li>
+            <li data-menuanchor="page3" id="btn-auttum"><a href="#page3"></a></li>
+            <li data-menuanchor="page4" id="btn-winter"><a href="#page4"></a></li>
+        </ul>
+    </div>
+    <div class="poemplace">
+        <div class="content">
+            <span>
+                <h1>春晓</h1>
+                <h3>唐&emsp;孟浩然</h3>
+                <p>春眠不觉晓</p>
+                <p>处处闻啼鸟</p>
+                <p>夜来风雨声</p>
+                <p>花落知多少</p>
+            </span>
+        </div>
+    </div>
+    <div id="fullpage">
+        <div class="section">
+            <div class="bg spring"></div>
+        </div>
+        <div class="section">
+            <div class="bg summer"></div>
+            <!-- <div class="content" style="position: absolute;top:17.125vh;left:5vw;width: 10em;height: 10em;background-color:#FFF6C3;">
+                <h1 class="title-one" style="font-size: 35px;color:black;margin:100px 0 10px 0;">&nbsp;夏日绝句</h1>
+                <h2 class="title-two" style="font-size: 8px;color: black;">【作者】李清照 &nbsp;&nbsp;&nbsp;【朝代】宋</h2>
+                <p style="font-size:20px;color: black;margin-top: 40px;">生当作人杰</p>
+                <p style="font-size:20px;color: black;">死亦为鬼雄</p>
+                <p style="font-size:20px;color: black;">至今思项羽</p>
+                <p style="font-size:20px;color: black;">不肯过江东</p>
+            </div> -->
+        </div>
+        <div class="section">
+            <div class="bg auttum"></div>
+            <!-- <div class="content" style="position: absolute;top:17.125vh;left:5vw;width: 10em;height: 10em;background-color:#A07942;">
+                <h1 class="title-one" style="font-size: 35px;color:black;margin:100px 0 10px 0;">山中</h1>
+                <h2 class="title-two" style="font-size: 8px;color: black;">【作者】王维 &nbsp;&nbsp;&nbsp;【朝代】唐</h2>
+                <p style="font-size:20px;color: black;margin-top: 40px;">荆溪白石出</p>
+                <p style="font-size:20px;color: black;">天寒红叶稀</p>
+                <p style="font-size:20px;color: black;">山路元无雨</p>
+                <p style="font-size:20px;color: black;">空翠湿人衣</p>
+            </div> -->
+        </div>
+        <div class="section">
+            <div class="bg winter"></div>
+            <!-- <div class="content" style="position: absolute;top:17.125vh;left:5vw;width: 10em;height: 10em;background-color:#E0E8EF;">
+                <h1 class="title-one" style="font-size: 35px;color:black;margin:100px 0 10px 0;">江雪</h1>
+                <h2 class="title-two" style="font-size: 8px;color: black;">【作者】柳宗元 &nbsp;&nbsp;&nbsp;【朝代】唐</h2>
+                <p style="font-size:20px;color: black;margin-top: 40px;">千山鸟飞绝</p>
+                <p style="font-size:20px;color: black;">万径人踪灭</p>
+                <p style="font-size:20px;color: black;">孤舟蓑笠翁</p>
+                <p style="font-size:20px;color: black;">独钓寒江雪</p>
+            </div> -->
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+        $('#fullpage').fullpage({
+            //是否显示导航
+            'navigation': true,
+            //导航小圆点的提示
+            navigationTooltips: ['One', 'Two','Three','Four'],
+            // 绑定菜单
+            menu:'.menu ul',
+            // 定义锚链接
+            anchors:['page1','page2','page3','page4'],
+            //屏幕自适应
+            easing: 'easeInOutCubic',
+            controlArrows: false,
+            resize: true,
+            //固定元素
+            fixedElements: '.menu,.poemplace',
+            //回调函数
+            afterLoad:function(anchorLink,index){
+                onLoaded(anchorLink);
+            },
+            onLeave:function(index,nextIndex,direction){
+                onLeaved(index,nextIndex,direction);
+            }
+        });
+              //淡入
+              function onLoaded(anchorLink){
+            if(anchorLink=='page1')
+            {
+                ChangePoems('chunxiao');
+            }
+            if(anchorLink=='page2')
+            {
+                ChangePoems('xiari');
+            }
+            if(anchorLink=='page3')
+            {
+                ChangePoems('shanzhong');
+            }
+            if(anchorLink=='page4')
+            {
+                ChangePoems('jiangxue');
+            }
+            $('.poemplace').find('h1').animate({opacity:1});
+            $('.poemplace').find('h1').css('top','0');
+            $('.poemplace').find('h3').delay(1000).animate({opacity:1});
+            $('.poemplace').find('p').delay(2000).animate({opacity:1});
+        }
+        //淡出
+        function onLeaved(index,nextIndex,direction){
+            if(nextIndex==1)
+            {
+                $('.poemplace').css('background-color','rgba(206, 206, 189, 0.938)');
+            }
+            if(nextIndex==2)
+            {
+                $('.poemplace').css('background-color','rgba(18, 48, 50, 0.952)');
+            }
+            if(nextIndex==3)
+            {
+                $('.poemplace').css('background-color','rgba(155, 96, 48, 0.9)');
+            }
+            if(nextIndex==4)
+            {
+                $('.poemplace').css('background-color','rgba(230, 235, 240, 0.8)');
+            }
+            $('.poemplace').find('h1').css('opacity','0');
+            $('.poemplace').find('h1').css('top','-5%');
+            $('.poemplace').find('h3').css('opacity','0');
+            $('.poemplace').find('p').css('opacity','0');
+        }
+        //更换诗歌效果
+        function ChangePoems(title){
+            if(title=='chunxiao')
+            {
+                $('.poemplace').find('span').html("<h1>春晓</h1><h3>唐&emsp;孟浩然</h3><p>春眠不觉晓</p><p>处处闻啼鸟</p><p>夜来风雨声</p><p>花落知多少</p>");
+                $('.poemplace').find('span').css('color','#000');
+            }
+            if(title=='xiari')
+            {
+                $('.poemplace').find('span').html("<h1>夏日绝句</h1><h3>宋&emsp;李清照</h3><p>生当作人杰</p><p>死亦为鬼雄</p><p>至今思项羽</p><p>不肯过江东</p>");
+                $('.poemplace').find('span').css('color','#fff');
+            }
+            if(title=='shanzhong')
+            {
+                $('.poemplace').find('span').html("<h1>山中</h1><h3>唐&emsp;王维</h3><p>荆溪白石出</p><p>天寒红叶稀</p><p>山路元无雨</p><p>空翠湿人衣</p>");
+                $('.poemplace').find('span').css('color','#f1bc34');
+            }
+            if(title=='jiangxue')
+            {
+                $('.poemplace').find('span').html("<h1>江雪</h1><h3>唐&emsp;柳宗元</h3><p>千山鸟飞绝</p><p>万径人踪灭</p><p>孤舟蓑笠翁</p><p>独钓寒江雪</p>");
+                $('.poemplace').find('span').css('color','#000');
+            }
+        }
+        });
+        // var PoemPlace=$('.poemplace');
+    </script>
+</body>
+</html>

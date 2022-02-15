@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.0/jquery.js" type="text/javascript"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        .bg{
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+            position: fixed;
+            z-index: -1;
+        }
+        .contain{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu{
+            width: 820px;
+            height: 450px;
+            background-color: #fff;
+            box-shadow: 5px 5px 10px 2px rgb(15, 16, 17);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu-true{
+            width: 95%;
+            height: 95%;
+        }
+        .info{
+            height: 100%;
+            width: 389.5px;
+            float: left;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .info h1{
+            text-align: center;
+            font-size: 1.7em;
+            letter-spacing: 1px;
+            padding: 1.3rem 0 0 0;
+        }
+        .info form{
+            padding: 1.3rem 1rem 0 0.98rem;
+            position: relative;
+            height: 350px;
+        }
+        .info input{
+            width: 350px;
+            height: 35px;
+            margin-bottom: 1.5rem;
+            padding-left: 5px;
+            font-size: 0.93rem;
+        }
+        #Sign input:first-child,#Find input:first-child{
+            margin-top: 1.5rem;
+        }
+        #Sign input:last-child,#Find input:last-child{
+            top: 80%;
+        }
+        .info input:last-child{
+            width: 120px;
+            font-size: 1.03rem;
+            letter-spacing: 1px;
+            position: absolute;
+            top: 83%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0;
+            cursor: pointer;
+        }
+        .info form a{
+            display: block;
+            margin-bottom: .3em;
+            text-decoration: none;
+            font-size: 0.78rem;
+            color: rgb(7, 126, 120);
+            transition: all 0.3s ease;
+        }
+        .info form a:hover{
+            color:gray;
+        }
+        .info .content{
+            height: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            overflow: hidden;
+
+        }
+        .info .content #Sign{
+            height: 100%;
+        }
+        .info .content #Register{
+            height: 100%;
+        }
+        .image{
+            height: 100%;
+            width:  389.5px;
+            float: right;
+            background-image: url(/images/1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="contain">
+        <div class="menu">
+            <div class="menu-true">
+                <div class="info">
+                    <div class="content">
+                        <div id="Sign">
+                            <h1>登入</h1>
+                            <form action="#" method="post">
+                                <input type="text" placeholder="用户名" required minlength="6" maxlength="15">
+                                <input type="password" placeholder="密码" required minlength="6" maxlength="15">
+                                <input type="email" placeholder="邮箱" required>
+                                <a href="#Register">未有账号</a> 
+                                <a href="#Find">忘记密码</a>
+                                <input type="submit" value="登录">
+                            </form>
+                        </div>
+                        <div id="Register">
+                            <h1>注册</h1>
+                            <form action="#" method="post">
+                                <input type="text" placeholder="用户名" required pattern="^[a-zA-Z][a-zA-Z0-9_]{4,15}$" oninput="setMsg(this,'字母开头，允许5-16字节，允许字母数字下划线')" minlength="6" maxlength="15">
+                                <input  id="pass" type="password" placeholder="密码" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,10}$" oninput="setMsg(this,'必须包含大小写字母和数字的组合，不能使用特殊字符，长度在 8-10 之间')" minlength="6" maxlength="15">
+                                <input type="password" placeholder="确定密码" required onblur="setequal(this,'新密码和确认密码输入不一致,请重新输入')">
+                                <input type="email" placeholder="邮箱">
+                                <a href="#Sign">我已注册</a>
+                                <input type="submit" value="登录">
+                            </form>
+                        </div>
+                        <div id="Find">
+                            <h1>忘记密码</h1>
+                            <form action="#" method="post">
+                                <input type="email" placeholder="邮箱">
+                                <input type="email" placeholder="确认邮箱" autocomplete="none">
+                                <input type="text" placeholder="验证码">
+                                <a href="#Sign">返回登录</a>
+                                <input type="submit" value="登录">
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="image"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function setMsg(ele,text) {
+            /*validity布尔属性值，返回 input 输入值是否合法*/
+            /*patternMismatch初始化为true*/
+            ele.validity.patternMismatch?ele.setCustomValidity(text):ele.setCustomValidity('');
+        }
+        function setequal(ele,obj){
+            if($('#pass').val()!=ele.value){
+                alert(obj);
+            }
+        }
+    </script>
+</body>
+</html>

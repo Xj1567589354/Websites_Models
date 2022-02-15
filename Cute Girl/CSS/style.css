@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'microsoft yahei ui';
+    list-style: none;
+    text-decoration: none;
+}
+.body{
+    /* background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/AncStyle/summer.jpg); */
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.main{
+    width: 100%;
+    height:50px;
+    margin: 0 auto;;
+    background: rgba(48, 48, 116, 0.3);
+    display: inline-flex;
+    position: fixed;
+}
+/* .main ul{
+    margin-left: 50px;
+} */
+/* 主菜单调整左边距 */
+.betain{
+    height: 50px;
+    margin-left: 3vw;
+}
+.main ul li{
+    float: left;
+    display: flex;
+}
+.main ul  a{
+    color:#fff;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 20px;
+    padding: 5px 8px;
+    line-height: 35px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-top: 2px solid rgba(255,255,255,.1);
+    margin-right: 10px;
+}
+.refer1,.refer2,.refer3,.refer4,.refer5{
+    position: relative;
+}
+.system1,.system2,.system3,.system4,.system5{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: 100%;
+    transition: all .3s ease;
+}
+.refer1:hover .system1,.refer2:hover .system2,.refer3:hover .system3,.refer4:hover .system4,.refer5:hover .system5{
+   opacity: 1;
+   pointer-events: all;
+}
+.main ul a:hover{
+    background: rgba(69, 59, 97,0.6);;
+}
+/* .main ul li ul{
+    display: none;
+    margin-left: 5px;;
+} */
+/* .main ul li ul li{
+    border-top: 1px solid #fff;
+    height: 50px;
+    line-height: 50px;
+} */
+.face{
+    display: flex;
+    justify-content: center;
+}
+.face img{
+    height: auto;
+	width: 100px;
+	border: 3px solid #7C6363;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+}
+.face img:hover{
+    border: 4px solid #FFB6C1;
+    box-shadow: 0 0 25px 3px #FFB6C1;
+    transform: rotate(360deg);
+}
+.title{
+    text-align: center;
+    margin: 2vh 0 3vh 0;
+}
+.title h1{
+	color: #fff;
+	font-size:30px;
+}
+/* .button{
+    display: flex;
+} */
+/* .btn{
+	border: 1px solid #fff;
+	padding: 1.5vh 2vw;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.6s ease;
+}
+.btn:hover{
+	background-color: #fff;
+	color:#000;
+} */
+
+
+.menu{
+    border-radius: 40%;
+    position: relative;
+    transition: all .2s;
+    margin: 11px;
+    padding: 3px 5px;
+}
+.menu ul li{
+display: flex;
+}
+
+.menu ul a{
+    line-height: 35px;
+    /* font-size: 16px; */
+    color: white;
+    box-sizing: border-box;
+    /* border-top: 1px solid rgba(255,255,255,.1); */
+    border-bottom: 2px solid black;
+    white-space: nowrap;
+    transition: all .4s ease;
+    padding: 0 1vw;
+}
+.menu ul li a:hover{
+    color: skyblue;
+    padding-left: 3px;
+}
+.menu ul a i{
+    margin-right: 5px;
+}
+/* 菜单按钮样式 */
+#check{
+    cursor: pointer;
+    font-size: 25px;
+    /* margin: 6px; */
+    color: whitesmoke;
+    /* padding: 6px; */
+    transition: all 0.2s; 
+}
+.menu:hover{
+    background-color: whitesmoke;
+}
+.menu:hover #check{
+    color: black;
+}
+/* 设置按钮在右上角 */
+.menudiv {
+    position: fixed;
+    top: 0;
+    right: 1vw;
+}
+/* 一级菜单 */
+.submenu{
+    position: absolute;
+    background-color:#3b3a42;
+    top:100%;
+    right: 30%;
+    transition: all .4s;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    opacity: 0;
+    pointer-events: none;
+}
+/* 多级菜单 */
+#relat,#relat2,#relat3{
+    position: relative;
+}
+
+.menu:hover .submenu,#relat:hover .sublist,#relat2:hover .sublist2,#relat3:hover .sublist3{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.sublist,.sublist2,.sublist3{
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: all .4s;
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    opacity: 0;
+    pointer-events: none;
+    background-color:#3b3a42;
+}
+.name{
+    display: flex;
+    /*实现水平居中*/
+     /* justify-content: center; */
+     /* 垂直居中 */
+    align-items: center;
+    color: blanchedalmond;
+    text-align: center;
+    padding: 0 0 0 3vw;
+    font-size: 20px;
+    top:1.5vh;
+    left: 1.5vw;
+}
+.info{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+hr{
+	width:100%;
+	border:none;
+    border-top: 1px solid rgba(255,255,255,0.4);
+}
+.words,.sources{
+    margin: 1vh 6vw;
+}
+.button p{
+    color:white;
+}
+
+.inner{
+    margin-top: -4vh;
+}

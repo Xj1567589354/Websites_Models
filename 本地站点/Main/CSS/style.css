@@ -1,0 +1,339 @@
+*{
+	margin: 0;
+	font-family: 'microsoft yahei ui';
+    list-style: none;
+    text-decoration: none;
+	scroll-behavior: smooth;
+}
+.body{
+	width:100%;
+	max-height: auto;
+	min-height:100vh;
+/*	background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../PHP/CoverImg.php?type=bg);*/
+	background-position: center;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+.head
+{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 4px solid #FFFFFF;
+	transition: all 0.6s ease;
+}
+.head:hover{
+	border: 5px solid #D88655;
+	box-shadow: 0 0 20px 5px #D88655;
+	transform:rotate(360deg);
+}
+.inner{
+	display: table;
+	width: 100%;
+	padding-top:10vh;
+}
+.name{
+	font-size: 45px;
+	margin: 15px;
+	text-shadow: 0 0 3px #110a0e;
+	font-weight: lighter;
+	font-family:"Microsoft YaHei UI";
+}
+.hr{
+	width:28%;
+	margin: 10px;
+	border:none;
+	border-top: 1px solid rgba(255,255,255,0.4);
+}
+/*.words{
+	font-size: 130%;
+	color: aliceblue;
+	font-family:"Microsoft YaHei UI";
+	font-weight: lighter;
+}*/
+.wordstext{
+	width: 100%;
+	color:aliceblue;
+	text-shadow: 0 0 4px aliceblue;
+	font-family:"Microsoft YaHei UI";
+	font-weight: lighter;
+}
+.wordsfrom{
+	width: 100%;
+	color: aliceblue;
+	text-shadow: 0 0 1px aliceblue;
+	font-family:"Microsoft YaHei UI";
+	margin-top: 7px;
+}
+.contain ul,.navi ul{
+	list-style-type:none;
+	margin-top: 70px;
+	margin-left: -45px;
+}
+.contain li,.navi li{
+	display: inline-block;
+}
+.contain a{
+	text-decoration: none;
+	color:#fff;
+	padding:10px 22px ;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	margin:3px;
+	text-align: center;
+	transition: 0.3s ease;
+}
+.contain  a:hover{
+		background-color:#7C6363;
+}
+.navi{
+	padding-bottom: 40px;
+}
+.navi li{
+	padding: 0px;
+	margin: 10px;
+}
+.navi li a{
+	border-radius: 30%;
+	margin:0px;
+	padding: 15px 8px 6px 8px;
+	transition: 0.4s ease;
+}
+.navi a:hover{
+	background-color:#A6D1E5;
+}
+.qqpage{
+	pointer-events: none;
+	display:block;
+	background-color:#000000;
+	border-radius: 20px;
+	border: 4px solid #2C566A;
+	position: absolute;
+	bottom:100%;
+	opacity: 0;
+	margin-left: -100px;
+	transition:all 0.3s;
+}
+.qqr{
+	background-size:cover;
+	width:250px;
+	height:320px;
+	margin: 5px;
+	display: flex;
+}
+.qq,.wx,.bli{
+	position: relative;
+}
+.navi li a:hover+.qqpage{
+	bottom:160%;
+	opacity: 1;
+}
+.wxpage{
+	pointer-events: none;
+	background-color:#000000;
+	border: 4px solid #2C566A;
+	border-radius: 10px;
+	position: absolute;
+	margin-left: -100px;
+	bottom:100%;
+	display:block;
+	opacity: 0;
+	transition: all 0.3s;
+}
+.wxpr{
+	background-size:cover;
+	width: 250px;
+	height: 251px;
+	margin:15px;
+}
+.navi li a:hover+.wxpage{
+	bottom: 160%;
+	opacity: 1;
+}
+.blipage{
+	pointer-events: none;
+	display: block;
+	background-color: #000000;
+	border: 4px solid #2C566A;
+	border-radius: 15px;
+	position: absolute;
+	margin-left: -100px;
+	bottom: 100%;
+	opacity: 0;
+	transition: all 0.3s;
+}
+.bliqr{
+	background-size: cover;
+	width: 250px;
+	height: 320px;
+	margin: 10px;
+}
+.navi li a:hover+.blipage{
+	bottom: 160%;
+	opacity: 1;
+}
+/*.music{
+	color: aliceblue;
+	height:40px;
+	margin-left: 700px;
+}*/
+.face{
+	background-image: url(https://xjskr.top/PHP/CoverImg.php?type=cover);
+	width: 100%;
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.back{
+	background-color:#000000;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.back .sanjiao{
+	position: absolute;
+	top:89.5%;
+	left: 50.5%;
+	font-size: 3.4rem;
+	color:#fff;
+	transition: all 0.3s ease;
+}
+.sanjiao:hover{
+	color: burlywood;
+}
+.menu{
+    border-radius: 40%;
+    position: relative;
+    transition: all .2s;
+    margin: 11px;
+    padding: 3px 5px;
+}
+.menu ul li{
+display: flex;
+}
+
+.menu ul a{
+    line-height: 35px;
+/*    font-size: 16px;*/
+    color: white;
+    box-sizing: border-box;
+/*    border-top: 1px solid rgba(255,255,255,.1);*/
+    border-bottom: 2px solid black;
+    white-space: nowrap;
+    transition: all .4s ease;
+	padding: 0 1vw;
+}
+.menu ul li a:hover{
+    color: skyblue;
+    padding-left: 3px;
+}
+.menu ul a i{
+    margin-right: 5px;
+}
+/* 菜单按钮样式 */
+#check{
+    cursor: pointer;
+    font-size: 25px;
+    /* margin: 6px; */
+    color: whitesmoke;
+    /* padding: 6px; */
+    transition: all 0.2s; 
+}
+.menu:hover{
+    background-color: whitesmoke;
+}
+.menu:hover #check{
+    color: black;
+}
+/* 设置按钮在右上角 */
+.menudiv {
+    position: fixed;
+    top: 0;
+    right: 1vw;
+}
+/* 一级菜单 */
+.submenu{
+    position: absolute;
+    background-color:#3b3a42;
+    top:100%;
+    right: 30%;
+    transition: all .4s;
+/*    padding-left: 10px;
+    padding-right: 10px;*/
+    opacity: 0;
+    pointer-events: none;
+}
+/* 多级菜单 */
+/*#relat,#relat2,#relat3{
+    position: relative;
+}*/
+
+.menu:hover .submenu/*,#relat:hover .sublist,#relat2:hover .sublist2,#relat3:hover .sublist3*/{
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*.sublist,.sublist2,.sublist3{
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: all .4s;
+    opacity: 0;
+    pointer-events: none;
+    background-color:#3b3a42;
+}*/
+.menu ul{
+	padding: 0;
+}
+.contain ul a i{
+	margin-right: 5px;
+}
+/*@media screen and (max-width:400px) {
+	.contain{
+		display: none;
+	}
+}*/
+.musicdis{
+	padding: 3px 5px;
+	margin: 11px;
+	border-radius: 40%;
+}
+.musicdis i{
+	font-size: 25px;
+	color: #fff;
+	cursor: pointer;
+}
+.musicdis:hover{
+	background-color: whitesmoke;
+}
+.musicdis:hover #check2{
+	color: black;
+}
+.music{
+	position: fixed;
+	top:0;
+	right:3.5vw;
+	transition: all 0.3s ease;
+}
+.bottom img{
+	float: left;
+	width: 15px;
+}
+@media(max-width:1080px){
+	.music{
+		right: 7vw;
+	}
+	.head{
+		width: 100px;
+		height: 100px;
+	}
+}
+.musicdis i{
+	animation: rotate 6s linear  infinite;
+}
+/* 关键帧，0%是动画开始时间，100%是动画结束时间 */
+@keyframes rotate{
+    0%{transform: rotateZ(0deg);}
+    100%{transform: rotateZ(360deg);}
+}
